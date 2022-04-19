@@ -13,15 +13,18 @@ x_4(1:length(x)) = x;
 x_1 = x_total;
 x_1(end-length(x)+1:end) = x;
 
-x_2 = x(end:-1:1);
-
 x_total = x_total + (x_4.*x_1);
 
+x_2 = x(end:-1:1);
+x_2 = x_2.*x;
+xx_2 = x_total;
+xx_2(5:4+length(x_2)) = x_2;
 
+x_total = x_total + xx_2;
 
 
 figure
 stem(n,x)
 
 figure
-stem(n,x_2)
+stem(n_total,x_total)
