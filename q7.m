@@ -6,3 +6,4 @@ for i = 1:1:3
     figure
     stem(n,x);
 end
+%end of message
